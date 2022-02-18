@@ -1,3 +1,9 @@
+/** Summary **/
+/* This css file contains style information
+    for certain classNames described here to
+    be used in the layout.js file
+*/
+
 .container {
   max-width: 36rem;
   padding: 0 1rem;

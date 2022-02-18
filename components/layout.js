@@ -4,6 +4,9 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
+// Summary //
+// This file contains
+
 const name = 'Douglas Galm'
 export const siteTitle = 'Next.js Sample Website'
 
