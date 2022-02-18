@@ -1,9 +1,14 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/blog-posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import CoffeeButton from '../components/coffee-button'
+
+// TODO: move this to config
+const payPalLink = "https://www.paypal.com/donate/?business=CAPDXWBRXRRH2&no_recurring=0&currency_code=USD";
 
 // getStaticProps() is a special function in next.js that populates the props
 // that will be passed to Home component
@@ -42,7 +47,6 @@ export default function Home({ allPostsData, data }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      {/* className= sets the attribute for the given section, and we can use styles defined from utilStyles which was imported*/}
       <section className={utilStyles.headingMd}>
         <p>Hello, today my name is Douglas Galm. I am a software engineer and I love the sweet flavor of Yellow Watermelons - and the color too.</p>
       </section>
@@ -51,17 +55,20 @@ export default function Home({ allPostsData, data }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
-          </li>
+              <Link href={`/posts/${id}`}>
+                <a>{title}</a>
+              </Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
           ))}
         </ul>
       </section>
+      <Link href={payPalLink} passHref>
+        <CoffeeButton></CoffeeButton>
+      </Link>
     </Layout>
   )
 }
