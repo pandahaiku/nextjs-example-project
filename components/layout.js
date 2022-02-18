@@ -5,7 +5,8 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 // Summary //
-// This file contains
+// This file contains information for how the layout should be rendered
+// It covers the page layout for home and non-home pages
 
 const name = 'Douglas Galm'
 export const siteTitle = 'Next.js Sample Website'
