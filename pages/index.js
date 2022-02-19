@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/blog-posts'
 import Link from 'next/link'
 import Date from '../components/date'
@@ -47,19 +45,19 @@ export default function Home({ allPostsData, data }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section className="text-xl leading-normal">
         <p>Hello, today my name is Douglas Galm. I am a software engineer and I love the sweet flavor of Yellow Watermelons - and the color too.</p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+      <section className="text-xl leading-normal pt-px">
+        <h2 className="text-2xl mx-0 my-4">Blog</h2>
+        <ul className="m-0 p-0">
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li className="mx-0 mt-0 mb-5" key={id}>
               <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+                <a className="text-blue-500 no-underline hover:underline hover:text-yellow-500">{title}</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className="text-gray-500">
                 <Date dateString={date} />
               </small>
             </li>
