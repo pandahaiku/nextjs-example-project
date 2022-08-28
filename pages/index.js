@@ -70,7 +70,7 @@ export default function Home({ allPostsData, data }) {
               </li>
             ))} */}
             <Link href="https://www.ign.com/articles/2019/11/25/top-25-best-anime-series-of-all-time">
-                  <a className="text-blue-500 no-underline hover:underline hover:text-yellow-500">IGN's TOP 25 Anime of All Time</a>
+                  <a className="text-blue-500 no-underline hover:underline hover:text-yellow-500">IGN&apos;s TOP 25 Anime of All Time</a>
             </Link>
           </ul>
         </section>
