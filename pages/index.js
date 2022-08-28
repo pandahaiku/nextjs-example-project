@@ -51,12 +51,14 @@ export default function Home({ allPostsData, data }) {
           <title>{siteTitle}</title>
         </Head>
         <section className="text-xl leading-normal">
-          <p>Hello, today my name is Douglas Galm. I am a software engineer and I love the sweet flavor of Yellow Watermelons - and the color too.</p>
+          <p>Anime Repo is a website for everything Anime. Top Rated Anime. Reviews. Discussions. Everything.
+            Currently Under Construction. Please come back later!
+          </p>
         </section>
-        <section className="text-xl leading-normal pt-px">
+        <section className="text-xl leading-normal pt-px my-4">
           <h2 className="text-2xl mx-0 my-4">Blog</h2>
           <ul className="m-0 p-0">
-            {allPostsData.map(({ id, date, title }) => (
+            {/* {allPostsData.map(({ id, date, title }) => (
               <li className="mx-0 mt-0 mb-5" key={id}>
                 <Link href={`/posts/${id}`}>
                   <a className="text-blue-500 no-underline hover:underline hover:text-yellow-500">{title}</a>
@@ -66,7 +68,10 @@ export default function Home({ allPostsData, data }) {
                   <Date dateString={date} />
                 </small>
               </li>
-            ))}
+            ))} */}
+            <Link href="https://www.ign.com/articles/2019/11/25/top-25-best-anime-series-of-all-time">
+                  <a className="text-blue-500 no-underline hover:underline hover:text-yellow-500">IGN's TOP 25 Anime of All Time</a>
+            </Link>
           </ul>
         </section>
         <Link href={payPalLink} passHref>

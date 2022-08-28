@@ -6,8 +6,8 @@ import Link from 'next/link'
 // This file contains information for how the layout should be rendered
 // It covers the page layout for home and non-home pages
 
-const name = 'Douglas Galm'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'Anime Repo'
+export const siteTitle = 'Anime Repo... Under construction'
 
 export default function Layout({ children, home }) {
   return (
@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="animeRepoIcon"
         />
         <meta
           property="og:image"
@@ -32,10 +32,9 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.jpg"
-              className="rounded-full"
-              height={144}
-              width={144}
+              src="/images/profile.png"
+              height={880}
+              width={1452}
               alt={name}
             />
             <h1 className="font-extrabold text-4xl mx-0 my-4 tracking-tighter">{name}</h1>
@@ -46,10 +45,9 @@ export default function Layout({ children, home }) {
               <a>
                 <Image
                   priority
-                  src="/images/profile.jpg"
-                  className="rounded-full"
-                  height={108}
-                  width={108}
+                  src="/images/profile.png"
+                  height={880}
+                  width={1452}
                   alt={name}
                 />
               </a>
